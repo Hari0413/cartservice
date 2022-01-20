@@ -24,7 +24,7 @@ spec:
   # Use service account that can deploy to all namespaces
   # serviceAccountName: cd-jenkins
   containers:
-  - name: dotnet-build
+  - name: dotnet
     image: mcr.microsoft.com/dotnet/sdk
     command:
     - cat
@@ -43,7 +43,7 @@ spec:
 }
   }
   stages {
-    stage('codebuild') {
+    stage('Test') {
       steps {
         container('dotnet-build') {
           sh """
