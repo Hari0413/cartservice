@@ -25,7 +25,7 @@ spec:
   # serviceAccountName: cd-jenkins
   containers:
   - name: dotnet
-    image: mcr.microsoft.com/dotnet/sdk
+    image: mcr.microsoft.com/dotnet/framework/sdk
     command:
     - cat
     tty: true
